@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="I'm Perfect Marketplace Buah dan Sayur Imperfect">
+  <meta name="keywords" content="I'm Perfect, Imperfect, Buah, Sayur, Marketplace">
+  <meta name="author" content="DDAP Kelompok 7" />
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/LP/bootstrap.css" />
+  <link href="css/LP/style.css" rel="stylesheet" />
+  <link href="css/LP/responsive.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar + Hero -->
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <img src="img/LP/hero-bg.png" alt="">
+    </div>
+
+    <!-- header section start -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/"><img src="img/LP/logo.svg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class=""></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">Tentang</a></li>
+              <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="/login">Masuk</a></li>
+              <li class="nav-item"><a class="nav-link" href="/sign-up">Daftar</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- hero section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      Hindari Food Loss bersama I’m Perfect. Hemat, mudah, dan terpercaya
+                    </h1>
+                    <p>
+                      Marketplace buah dan sayur imperfect pertama di Indonesia yang memberikan kemudahan untuk membeli
+                      buah dan sayur imperfect berkualitas.
+                    </p>
+                    <img src="img/LP/Statistic.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- hero section end -->
+  </div>
+
+  <!-- Mengapa harus beli di i'm perfect section -->
+    <section class="department_section layout_padding">
+      <div class="department_container">
+        <div class="container ">
+          <div class="heading_container heading_center">
+            <h2>
+              Mengapa Harus Beli Buah & Sayur di I’m Perfect?
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/s1.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Aman Dikonsumsi
+                  </h5>
+                  <p>
+                    Buah dan sayur imperfect sangat aman dikonsumsi selayaknya buah pada umumnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/s2.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Hemat
+                  </h5>
+                  <p>
+                    Dengan membeli buah imperfect, anda telah menghemat lebih dari 30%.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/s3.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sehat & Bergizi
+                  </h5>
+                  <p>
+                    Buah imperfect mengandung banyak phytochemicals yang baik untuk melindungi sel dari kanker.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/s4.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Chat Admin
+                  </h5>
+                  <p>
+                    Kami memiliki fitur chat dengan admin 24/7.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  <!-- Our Product -->
+    <section class="doctor_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>
+            Produk Kami
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img src="img/LP/Carrot.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img src="img/LP/Orange-2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img src="img/LP/Strawberry.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <a href="homepage.html">View All</a>
+        </div>
+      </div>
+    </section>
+
+  <!-- Testimoni -->
+    <section class="department_section layout_padding">
+      <div class="department_container">
+        <div class="container ">
+          <div class="heading_container heading_center">
+            <h2>
+              Apa Kata Mereka?
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/testi3.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Bagas
+                  </h5>
+                  <p>
+                    “I’m Perfect memudahkan saya dalam berjualan buah-buah yang kurang laku. Terimakasih banyak, I’m
+                    Perfect!”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/testi2.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Renata
+                  </h5>
+                  <p>
+                    “I’m Perfect benar-benar membantu saya jika hasil panen saya mempunyai bentuk yang kurang sempurna.
+                    Good job I’m Perfect!”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/testi1.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Zayn
+                  </h5>
+                  <p>
+                    “Seru banget pake I’m Perfect! Mudah penggunaan dan sangat berguna, loh. Barengin keren!”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="img/LP/testi4.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nicho
+                  </h5>
+                  <p>
+                    “I’m Perfect sangat berguna untuk berjualan imperfect produce agar tidak terjadi food loss. Thanks I’m
+                    Perfect! You are perfect”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="footer spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer__about">
+              <div class="footer__about__logo">
+                <a href="./index.html"><img src="img/LP/logo.svg" alt=""></a>
+                <a>Hargai hasil panenmu dan mulailah berlangganan bersama kami sekarang!</a>
+                <a href="./index.html"><img src="img/LP/sosmed.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+            <div class="footer__widget">
+              <h6>Layanan Pelanggan</h6>
+              <ul>
+                <li><a href="#">Bantuan</a></li>
+                <li><a href="#">Metode Pembayaran</a></li>
+                <li><a href="#">Chat dengan Admin</a></li>
+                <li><a href="#">Klaim Garansi</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+            <div class="footer__widget">
+              <h6>Jelajahi</h6>
+              <ul>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Karir</a></li>
+                <li><a href="#">Kebijakan Privasi</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-12">
+            <div class="footer__widget">
+              <h6>Partner Pembayaran</h6>
+
+              <a href="./index.html"><img src="img/LP/metodepembayaran.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer__copyright">
+              <div class="footer__copyright__text">
+                <p>
+                  Copyright 2021 I’m Perfect. All rights reserved.
+                </p>
+              </div>
+              <div class="footer__copyright__payment">
+                <p>
+                  Terms & Conditions Privacy Policy Contact Us
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  <script type="text/javascript" src="js/LP/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/LP/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/LP/custom.js"></script>
+</body>
+</html>
