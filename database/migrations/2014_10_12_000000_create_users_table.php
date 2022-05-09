@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('alamat');
             $table->string('kode_pos');
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

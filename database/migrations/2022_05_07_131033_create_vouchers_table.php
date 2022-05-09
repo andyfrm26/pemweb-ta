@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('vouchers', function (Blueprint $table) {
             $table->id();
             $table->string('code_voucher');
-            $table->int('percentage');
-            $table->int('max_discount');
-            $table->int('min_discount');
+            $table->integer('percentage');
+            $table->integer('max_discount');
+            $table->integer('min_discount');
             $table->timestamps();
         });
     }

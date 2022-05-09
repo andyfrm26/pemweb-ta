@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->string('product_list');
-            $table->int('total_price');
+            $table->integer('total_price');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('voucher_id')->nullable();
             $table->timestamps();

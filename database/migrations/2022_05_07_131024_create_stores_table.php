@@ -19,9 +19,9 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('deskripsi');
             $table->string('foto');
-            $table->int('product_sold');
-            $table->int('total_visittor');
-            $table->int('total_selling');
+            $table->integer('product_sold');
+            $table->integer('total_visittor');
+            $table->integer('total_selling');
             $table->timestamps();
         });
     }

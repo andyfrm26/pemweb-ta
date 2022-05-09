@@ -15,13 +15,18 @@
                       <h3 class="text-center subheading">Let's help you meet your needs</h3><br/><br/>
                     </div>
                   </div>
-                  <div class="form-group form-primary"> <input type="text" class="form-control" name="first_name" value="" placeholder="Display name" id="first_name"> </div>
-                  <div class="form-group form-primary"> <input type="text" class="form-control" name="email" value="" placeholder="Email" id="email"> </div>
+                  <form action="{{ route('register') }}" method="post">
+                    @csrf
+                  <div class="form-group form-primary"> <input type="text" class="form-control" name="name" value="" placeholder="Display name" id="first_name"> </div>
+                  <div class="form-group form-primary"> <input type="email" class="form-control" name="email" value="" placeholder="Email" id="email"> </div>
                   <div class="form-group form-primary"> <input type="password" class="form-control" name="password" placeholder="Password" value="" id="password"> </div>
                   <div class="form-group form-primary"> <input type="password" class="form-control" name="password_confirm" placeholder="Repeat password" value="" id="password_confirm"> </div>
+                  <div class="form-group form-primary"> <input type="text" class="form-control" name="alamat" value="" placeholder="Alamat" id="alamat"> </div>
+                  <div class="form-group form-primary"> <input type="text" class="form-control" name="kodepos" value="" placeholder="Kode Pos" id="kodepos"> </div>
                   <div class="row">
-                    <div class="align-self-center mx-auto"> <a href="/home" class="primary-btn">Daftar</a></div>
+                    <div class="align-self-center mx-auto"> <button type="submit" class="primary-btn">Daftar</button></div>
                   </div>
+                  </form>
                   <div class="or-container">
                     <div class="line-separator"></div>
                     <div class="or-label">or</div>

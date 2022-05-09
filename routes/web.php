@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,6 +40,9 @@ Route::get('/login', function () {
         'title' => 'login'
     ]);
 });
+
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/sign-up', [AuthController::class, 'register'])->name('register');
 
 Route::get('/sign-up', function () {
     return view('sign-up', [

@@ -12,11 +12,14 @@
                       <h3 class="text-center heading">Welcome back!</h3><br/>
                     </div>
                   </div>
+                  <form action="{{route('login')}}" method="post">
+                    @csrf
                   <div class="form-group form-primary"> <input type="text" class="form-control" name="email" value="" placeholder="Email" id="email"> </div>
                   <div class="form-group form-primary"> <input type="password" class="form-control" name="password" placeholder="Password" value="" id="password"> </div>
                   <div class="row">
-                    <div class="align-self-center mx-auto"> <a href="/home" class="primary-btn">Masuk</a></div>
+                    <div class="align-self-center mx-auto"> <button type="submit" class="primary-btn">Masuk</button></div>
                   </div>
+                  </form>
                   <div class="or-container">
                     <div class="line-separator"></div>
                     <div class="or-label">or</div>
