@@ -5,7 +5,7 @@
         <div class="col-lg-3">
           <div class="header__logo">
             <a href="/">
-              <img src="img/logo.svg" alt="">
+              <img src="/img/logo.svg" alt="">
             </a>
           </div>
         </div>

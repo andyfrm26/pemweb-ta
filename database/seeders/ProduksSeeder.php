@@ -4,18 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Produk;
 
-class DatabaseSeeder extends Seeder
+class ProduksSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            ProduksTableSeeder::class
-        ]);
+        Produk::factory()->count(30)->create();
     }
 }

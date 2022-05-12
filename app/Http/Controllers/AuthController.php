@@ -13,7 +13,7 @@ class AuthController extends Controller
         $credentials = $req->only('email', 'password');
 
         if(Auth::attempt($credentials)) {
-            return redirect('/home');
+            return redirect('imperfect/home');
         } else {
             return redirect('login');
         }

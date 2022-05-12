@@ -19,7 +19,7 @@
                 <div class="col-lg-12">
                   <div class="featured__item">
                     <div class="featured__item__pics">
-                      <img class="gambarjerukbali" src="img/featured/Orange.jpg" style="width:150px;height:148px;" align="left" bgcolor="white">
+                      <img class="gambarjerukbali" src="/img/featured/Orange.jpg" style="width:150px;height:148px;" align="left" bgcolor="white">
                       <p8><class="text heading">&nbsp&nbsp&nbsp Jeruk Bali<p8>
                       <br/>
                       <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
@@ -30,7 +30,7 @@
                   </div>
                   <div class="featured__item">
                     <div class="featured__item__pics">
-                      <img class="gambarjerukbali" src="img/featured/Orange.jpg" style="width:150px;height:148px;" align="left" bgcolor="white">
+                      <img class="gambarjerukbali" src="/img/featured/Orange.jpg" style="width:150px;height:148px;" align="left" bgcolor="white">
                       <p8><class="text heading">&nbsp&nbsp&nbsp Jeruk Bali<p8>
                       <br/>
                       <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
@@ -72,13 +72,13 @@
                             <div class="hero__search">
                               <div class="hero__search__vm">
                                 <ul>
-                                  <center><img class="gambarva" src="img/Virtual_Acc.png"></center>
+                                  <center><img class="gambarva" src="/img/Virtual_Acc.png"></center>
                                   <center><a href="#">Virtual Account</a></center>
                                 </ul>
                               </div>
                               <div class="hero__search__tb">
                                 <ul>
-                                  <center><img class="gambartb" src="img/Transfer_Bank.png"></center>
+                                  <center><img class="gambartb" src="/img/Transfer_Bank.png"></center>
                                   <center><a href="#">Transfer Bank</a></center>
                                 </ul>
                               </div>

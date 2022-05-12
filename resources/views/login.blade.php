@@ -12,7 +12,7 @@
                       <h3 class="text-center heading">Welcome back!</h3><br/>
                     </div>
                   </div>
-                  <form action="{{route('login')}}" method="post">
+                  <form action="{{route('loginCheck')}}" method="post">
                     @csrf
                   <div class="form-group form-primary"> <input type="text" class="form-control" name="email" value="" placeholder="Email" id="email"> </div>
                   <div class="form-group form-primary"> <input type="password" class="form-control" name="password" placeholder="Password" value="" id="password"> </div>

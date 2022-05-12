@@ -21,7 +21,24 @@
                       <div class="col-lg-12"></div>
                     </div>
                     <div class="row featured__filter">
-                      <x-product-card/>
+                    @foreach($produk as $p)
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                      <div class="featured__item">
+                        <div class="featured__item__pic set-bg">
+                          <img src="/img/featured/Orange.jpg" alt="">
+                          <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="produk_jerukbali.html"><i class="fa fa-info"></i></a></li>
+                            <li><a href="voucher"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                        </div>
+                        <div class="featured__item__text">
+                          <h6><a href="produk_jerukbali.html">{{$p->nama}}</a></h6>
+                          <h5>Rp {{ number_format($p->harga, 0, '','.') }}/Kg</h5>
+                        </div>
+                      </div>
+                    </div>
+                    @endforeach
                     </div>
                 </div>
             </section>
