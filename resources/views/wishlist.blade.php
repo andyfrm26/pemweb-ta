@@ -34,7 +34,7 @@
                               @foreach($allWish as $wish)
                               <tr>
                                   <td class="shoping__cart__item">
-                                      <img src="img/Carrot.png" alt="">
+                                      <img src="/img/{{ $wish->produk->foto}}" alt="">
                                       <h5>{{ $wish->produk->nama }}</h5>
                                   </td>
                                   <td class="shoping__cart__price">

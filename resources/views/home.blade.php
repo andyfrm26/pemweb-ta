@@ -28,7 +28,7 @@
                           <ul class="featured__item__pic__hover">
                             <li><a href="/imperfect/add-wishlist/{{$p->id}}"><i class="fa fa-heart"></i></a></li>
                             <li><a href="produk_jerukbali.html"><i class="fa fa-info"></i></a></li>
-                            <li><a href="voucher"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="/imperfect/add-cart/{{$p->id}}"><i class="fa fa-shopping-cart"></i></a></li>
                           </ul>
                         </div>
                         <div class="featured__item__text">

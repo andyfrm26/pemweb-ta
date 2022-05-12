@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Produk;
 use App\Models\Wishlist;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 
 class ProdukController extends Controller
@@ -18,8 +19,10 @@ class ProdukController extends Controller
 
     public function indexCart()
     {
+        $allCart = Cart::where('user_id', Auth::user()->id)->get();
         return view('cart', [
-            'title' => 'cart'
+            'title' => 'cart',
+            'allCart' => $allCart
         ]);
     }
 
@@ -45,7 +48,21 @@ class ProdukController extends Controller
             $checkWish->delete();
         }
 
+        return redirect('/imperfect/home');
+    }
 
+    public function addCart($id)
+    {
+        $checkCart = Cart::where('produks_id', $id)->first();
+        if(empty($checkCart)) {
+            $checkCart = new Cart();
+            $checkCart->produks_id    = $id;
+            $checkCart->user_id       = Auth::user()->id;
+            $checkCart->save();
+        } else {
+            $checkCart->delete();
+        }
+        
         return redirect('/imperfect/home');
     }
 }

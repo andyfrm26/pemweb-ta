@@ -17,28 +17,19 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
+                  @foreach($allCart as $cart)
                   <div class="featured__item">
                     <div class="featured__item__pics">
-                      <img class="gambarjerukbali" src="/img/featured/Orange.jpg" style="width:150px;height:148px;" align="left" bgcolor="white">
-                      <p8><class="text heading">&nbsp&nbsp&nbsp Jeruk Bali<p8>
+                      <img class="gambarjerukbali" src="/img/featured/{{$cart->produk->foto}}" style="width:150px;height:148px;" align="left" bgcolor="white">
+                      <p8><class="text heading">&nbsp&nbsp&nbsp {{$cart->produk->nama}}<p8>
                       <br/>
-                      <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
+                      <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
                       <br/>
-                      <p7>&nbsp&nbsp&nbsp&nbsp&nbsp Rp 15.000/Kg</p7>
+                      <p7>&nbsp&nbsp&nbsp&nbsp Rp {{ number_format($cart->produk->harga, 0, '','.') }}/Kg</p7>
                       <button type="submit" class="ite-btn">UBAH</button>
                     </div>
                   </div>
-                  <div class="featured__item">
-                    <div class="featured__item__pics">
-                      <img class="gambarjerukbali" src="/img/featured/Orange.jpg" style="width:150px;height:148px;" align="left" bgcolor="white">
-                      <p8><class="text heading">&nbsp&nbsp&nbsp Jeruk Bali<p8>
-                      <br/>
-                      <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
-                      <br/>
-                      <p7>&nbsp&nbsp&nbsp&nbsp&nbsp Rp 15.000/Kg</p7>
-                      <button type="submit" class="ite-btn">UBAH</button>
-                    </div>
-                  </div>
+                  @endforeach
                 </div>
                 <div class="col-lg-12">
                   <div class="hero__search">

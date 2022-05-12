@@ -49,7 +49,8 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
     Route::get('/home', [ProdukController::class, 'indexHomepage']);
     Route::get('/cart', [ProdukController::class, 'indexCart']);
     Route::get('/wishlist', [ProdukController::class, 'indexWishlist']);
-    Route::get  ('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
+    Route::get('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
+    Route::get('/add-cart/{id}', [ProdukController::class, 'addCart']);
 
     Route::get('/my-store', function () {
         return view('my-store', [
