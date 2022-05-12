@@ -26,7 +26,7 @@
                       <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/featured/Orange.jpg" style="background-image: url('/img/featured/Orange.jpg');">
                           <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="/imperfect/add-wishlist/{{$p->id}}"><i class="fa fa-heart"></i></a></li>
                             <li><a href="produk_jerukbali.html"><i class="fa fa-info"></i></a></li>
                             <li><a href="voucher"><i class="fa fa-shopping-cart"></i></a></li>
                           </ul>

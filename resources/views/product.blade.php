@@ -18,12 +18,12 @@
             <div class="small-container single-product">
               <div class="row">
                 <div class="col-lg-4">
-                  <img src="img/produk/alpukatmentega/alpukat1.png" alt="" width="100%" id="ProductImg" />
+                  <img src="/img/produk/alpukatmentega/alpukat1.png" alt="" width="100%" id="ProductImg" />
                   <div class="small-img-row">
-                    <div class="small-img-col"><img src="img/produk/alpukatmentega/alpukat1.png" alt="" width="100%" class="small-img" /></div>
-                    <div class="small-img-col"><img src="img/produk/alpukatmentega/alpukat2.png" alt="" width="100%" class="small-img" /></div>
-                    <div class="small-img-col"><img src="img/produk/alpukatmentega/alpukat3.png" alt="" width="100%" class="small-img" /></div>
-                    <div class="small-img-col"><img src="img/produk/alpukatmentega/alpukat4.png" alt="" width="100%" class="small-img" /></div>
+                    <div class="small-img-col"><img src="/img/produk/alpukatmentega/alpukat1.png" alt="" width="100%" class="small-img" /></div>
+                    <div class="small-img-col"><img src="/img/produk/alpukatmentega/alpukat2.png" alt="" width="100%" class="small-img" /></div>
+                    <div class="small-img-col"><img src="/img/produk/alpukatmentega/alpukat3.png" alt="" width="100%" class="small-img" /></div>
+                    <div class="small-img-col"><img src="/img/produk/alpukatmentega/alpukat4.png" alt="" width="100%" class="small-img" /></div>
                   </div>
                 </div>
                 <div class="col-lg-7">

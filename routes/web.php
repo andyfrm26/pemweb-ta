@@ -46,19 +46,17 @@ Route::get('/sign-up', function () {
 });
 
 Route::prefix('imperfect')->middleware('auth')->group(function () { 
-    Route::get('/home', [ProdukController::class, 'index']);
-    Route::get('/cart', function () {
-        return view('cart', [
-            'title' => 'cart'
-        ]);
-    });
-    
+    Route::get('/home', [ProdukController::class, 'indexHomepage']);
+    Route::get('/cart', [ProdukController::class, 'indexCart']);
+    Route::get('/wishlist', [ProdukController::class, 'indexWishlist']);
+    Route::get  ('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
+
     Route::get('/my-store', function () {
         return view('my-store', [
             'title' => 'my-store'
         ]);
     });
-    
+
     Route::get('/help', function () {
         return view('help', [
             'title' => 'help'
@@ -83,11 +81,7 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
         ]);
     });
     
-    Route::get('/wishlist', function () {
-        return view('wishlist', [
-            'title' => 'wishlist'
-        ]);
-    });
+
     
     Route::get('/product', function () {
         return view('product', [

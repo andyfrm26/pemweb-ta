@@ -27,62 +27,24 @@
                               <tr>
                                   <th class="shoping__product">Produk</th>
                                   <th>Harga</th>
-
-                                  <th>Status</th>
-                                  <th></th>
+                                  <th>Action</th>
                               </tr>
                           </thead>
                           <tbody>
+                              @foreach($allWish as $wish)
                               <tr>
                                   <td class="shoping__cart__item">
                                       <img src="img/Carrot.png" alt="">
-                                      <h5>Wortel Organik</h5>
+                                      <h5>{{ $wish->produk->nama }}</h5>
                                   </td>
                                   <td class="shoping__cart__price">
-                                      Rp 10.000
-                                  </td>
-
-                                  <td class="shoping__cart__total">
-                                      Harga Turun 5%
+                                      Rp {{ number_format($wish->produk->harga, 0, '','.') }}
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="#" class="primary-btn">Beli Sekarang</a>
-                                  </td>
-
-                              </tr>
-                              <tr>
-                                  <td class="shoping__cart__item">
-                                      <img src="img/Jeruk.png" alt="">
-                                      <h5>Jeruk Jamaika</h5>
-                                  </td>
-                                  <td class="shoping__cart__price">
-                                      Rp 15.000
-                                  </td>
-
-                                  <td class="shoping__cart__total">
-                                      Harga Turun 10%
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="#" class="primary-btn">Beli Sekarang</a>
+                                      <a href="#" class="primary-btn">Add to Cart</a>
                                   </td>
                               </tr>
-                              <tr>
-                                  <td class="shoping__cart__item">
-                                      <img src="img/Jeruk_bali.png" alt="">
-                                      <h5>Jeruk Bali</h5>
-                                  </td>
-                                  <td class="shoping__cart__price">
-                                      Rp15.000
-                                  </td>
-
-                                  <td class="shoping__cart__total">
-                                      Harga Turun 15%
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="#" class="primary-btn">Beli Sekarang</a>
-                                  </td>
-
-                              </tr>
+                              @endforeach
                           </tbody>
                       </table>
                   </div>
