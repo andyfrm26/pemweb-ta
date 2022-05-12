@@ -65,4 +65,10 @@ class ProdukController extends Controller
         
         return redirect('/imperfect/home');
     }
+
+    public function review(){
+        return view('review', [
+            'title' => 'review'
+        ]);
+    }
 }

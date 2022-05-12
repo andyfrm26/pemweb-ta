@@ -1,6 +1,6 @@
 <x-layout :title="$title">
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/Background.png">
+<section class="breadcrumb-section set-bg" data-setbg="/img/Background.png">
   <div class="container">
       <div class="row">
           <div class="col-lg-12 text-center">
@@ -34,7 +34,7 @@
                 <tbody>
                   <tr>
                     <td class="shoping__cart__item">
-                      <img src="img/Carrot.png" alt="">
+                      <img src="/img/Carrot.png" alt="">
                       <h5>Wortel</h5>
                     </td>
                     <td class="shoping__cart__price">Rp30.000</td>
@@ -43,7 +43,7 @@
                   </tr>
                   <tr>
                     <td class="shoping__cart__item">
-                      <img src="img/Jeruk.png" alt="">
+                      <img src="/img/Jeruk.png" alt="">
                       <h5>Jeruk</h5>
                     </td>
                     <td class="shoping__cart__price">Rp20.000</td>
@@ -52,7 +52,7 @@
                   </tr>
                   <tr>
                     <td class="shoping__cart__item">
-                      <img src="img/Jeruk_bali.png" alt="">
+                      <img src="/img/Jeruk_bali.png" alt="">
                       <h5>Jeruk bali</h5>
                     </td>
                     <td class="shoping__cart__price">Rp10.000</td>

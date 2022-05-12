@@ -38,9 +38,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.svg" alt=""></a>
+                            <a href="./index.html"><img src="/img/logo.svg" alt=""></a>
                             <a>Hargai hasil panenmu dan mulailah berlangganan bersama kami sekarang!</a>
-                            <a href="./index.html"><img src="img/sosmed.png" alt=""></a>
+                            <a href="./index.html"><img src="/img/sosmed.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="footer__widget">
                         <h6>Partner Pembayaran</h6>
 
-                        <a href="./index.html"><img src="img/metodepembayaran.png" alt=""></a>
+                        <a href="./index.html"><img src="/img/metodepembayaran.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -98,13 +98,14 @@
     <!-- Footer Section End -->
     
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

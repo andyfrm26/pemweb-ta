@@ -24,7 +24,7 @@
                     @foreach($produk as $p)
                     <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                       <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/Orange.jpg" style="background-image: url('/img/featured/Orange.jpg');">
+                        <div class="featured__item__pic set-bg" data-setbg="/img/featured/Orange.jpg" style="background-image: url('/img/featured/Orange.jpg');">
                           <ul class="featured__item__pic__hover">
                             <li><a href="/imperfect/add-wishlist/{{$p->id}}"><i class="fa fa-heart"></i></a></li>
                             <li><a href="produk_jerukbali.html"><i class="fa fa-info"></i></a></li>

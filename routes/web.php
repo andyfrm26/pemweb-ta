@@ -51,6 +51,7 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
     Route::get('/wishlist', [ProdukController::class, 'indexWishlist']);
     Route::get('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
     Route::get('/add-cart/{id}', [ProdukController::class, 'addCart']);
+    Route::get('/review', [ProdukController::class, 'review']);
 
     Route::get('/my-store', function () {
         return view('my-store', [
@@ -79,6 +80,12 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
     Route::get('/history', function () {
         return view('history', [
             'title' => 'history'
+        ]);
+    });
+
+    Route::get('/review', function () {
+        return view('review', [
+            'title' => 'review'
         ]);
     });
     

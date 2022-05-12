@@ -73,7 +73,7 @@
               <div class="small-container">
                 <div class="row-related">
                   <div class="col-4">
-                    <a href="produk_jerukbali.html"><img src="img/produk/jerukjamaika/previewjerukbali.png" alt="" /></a>
+                    <a href="produk_jerukbali.html"><img src="/img/produk/jerukjamaika/previewjerukbali.png" alt="" /></a>
                     <a href="produk_jerukbali.html">
                       <h5>Jeruk Bali</h5>
                     </a>
@@ -87,7 +87,7 @@
                     <p>Rp. 15.000/Kg</p>
                   </div>
                   <div class="col-4">
-                    <a href="produk_jerukjamaika.html"><img src="img/produk/apelmalang/previewjerukjamaika.png" alt="" /></a>
+                    <a href="produk_jerukjamaika.html"><img src="/img/produk/apelmalang/previewjerukjamaika.png" alt="" /></a>
                     <a href="produk_jerukjamaika.html">
                       <h5>Jeruk Jamaika</h5>
                     </a>
@@ -101,7 +101,7 @@
                     <p>Rp. 15.000/Kg</p>
                   </div>
                   <div class="col-4">
-                    <a href="produk_apelmalang.html"><img src="img/produk/stroberiorganik/previewapelmalang.png" alt="" /></a>
+                    <a href="produk_apelmalang.html"><img src="/img/produk/stroberiorganik/previewapelmalang.png" alt="" /></a>
                     <a href="produk_apelmalang.html">
                       <h5>Apel Malang</h5>
                     </a>

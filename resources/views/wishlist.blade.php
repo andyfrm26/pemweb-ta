@@ -1,6 +1,6 @@
 <x-layout :title="$title">
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/Background.png">
+    <section class="breadcrumb-section set-bg" data-setbg="/img/Background.png">
       <div class="container">
           <div class="row">
               <div class="col-lg-12 text-center">

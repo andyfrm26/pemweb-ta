@@ -26,7 +26,12 @@
                       <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
                       <br/>
                       <p7>&nbsp&nbsp&nbsp&nbsp Rp {{ number_format($cart->produk->harga, 0, '','.') }}/Kg</p7>
-                      <button type="submit" class="ite-btn">UBAH</button>
+                      <button type="submit" class="ite-btn-hapus">HAPUS</button>
+                      <div class="qty-container">
+                        <span class="minus"><span></span></span>
+                        <span class="num">1</span>
+                        <span class="plus"><span></span><span></span></span>
+                      </div>
                     </div>
                   </div>
                   @endforeach
@@ -61,20 +66,26 @@
                             <br/>
                             <hr/>
                             <div class="hero__search">
-                              <div class="hero__search__vm">
-                                <ul>
-                                  <center><img class="gambarva" src="/img/Virtual_Acc.png"></center>
-                                  <center><a href="#">Virtual Account</a></center>
-                                </ul>
-                              </div>
-                              <div class="hero__search__tb">
-                                <ul>
-                                  <center><img class="gambartb" src="/img/Transfer_Bank.png"></center>
-                                  <center><a href="#">Transfer Bank</a></center>
-                                </ul>
-                              </div>
+                              <label for="virtualaccount">
+                                <div class="hero__search__vm">
+                                  <ul>
+                                    <center><img class="gambarva" src="/img/Virtual_Acc.png"></center>
+                                    <center><a href="#">Virtual Account</a></center>
+                                  </ul>
+                                </div>
+                              </label>
+                              <label for="transferbank">
+                                <div class="hero__search__tb">
+                                  <ul>
+                                    <center><img class="gambartb" src="/img/Transfer_Bank.png"></center>
+                                    <center><a href="#">Transfer Bank</a></center>
+                                  </ul>
+                                </div>
+                              </label>
                             </div>
                           </div>
+                          <input type="radio" name="pembayaran" value="Virtual Account" id="virtualaccount">
+                          <input type="radio" name="pembayaran" value="Transfer Bank" id="transferbank">
                         </form>
                       </div>
                     </div>
