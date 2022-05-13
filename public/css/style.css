@@ -1,3 +1,10 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} */
+
+
 @font-face {
 	font-family: NotoSerifBold;
 	src: url(./fonts/NotoSerif-Bold.ttf);
@@ -815,17 +822,27 @@ ol {
 }
 
 .hero__search__vm {
+	
+}
+
+.hero__search label[for="virtualaccount"] {
 	width: 350px;
 	height: 150px;
 	border: 1px solid #27AE60;
 	position: relative;
 	float: left;
 	border-radius: 10px 10px 10px 10px;
+	cursor: pointer;
 }
 
 .hero__search label[for="transferbank"] {
-	margin-left: 50px;
-	position: absolute;
+	width: 350px;
+	height: 150px;
+	border: 1px solid #27AE60;
+	position: relative;
+	float: right;
+	border-radius: 10px 10px 10px 10px;
+	cursor: pointer;
 }
 
 .hero__search__furmm input[type="radio"] {
@@ -834,14 +851,14 @@ ol {
 }
 
 .hero__search__furmm input[value="Transfer Bank"] {
-	right: 0;
+	display: inline-block;
 }
 
 .hero__search__furmm input[value="Virtual Account"] {
-	left: 100px;
+	display: inline-block;
 }
 
-.hero__search__vm ul  a {
+.hero__search__vm ul h5 {
 	font-size: 18px;
 	color: #6f6f6f;
 	text-transform: uppercase;
@@ -857,19 +874,14 @@ ol {
 }
 
 .hero__search__tb {
-	width: 350px;
-	height: 150px;
-	border: 1px solid #27AE60;
-	position: relative;
-	float: right;
-	border-radius: 10px 10px 10px 10px;
+
 }
 
-.hero__search__tb ul  a {
+.hero__search__tb ul h5 {
 	font-size: 18px;
 	color: #6f6f6f;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 800;
 	letter-spacing: 2px;
 	-webkit-transition: all, 0.3s;
 	-moz-transition: all, 0.3s;

@@ -70,22 +70,26 @@
                                 <div class="hero__search__vm">
                                   <ul>
                                     <center><img class="gambarva" src="/img/Virtual_Acc.png"></center>
-                                    <center><a href="#">Virtual Account</a></center>
+                                    {{-- <center><a href="#">Virtual Account</a></center> --}}
+                                    <center><h5>Virtual Account</h5></center>
                                   </ul>
                                 </div>
+                                <center>
+                                  <input type="radio" name="pembayaran" value="Virtual Account" id="virtualaccount">
+                                </center>
                               </label>
                               <label for="transferbank">
                                 <div class="hero__search__tb">
                                   <ul>
                                     <center><img class="gambartb" src="/img/Transfer_Bank.png"></center>
-                                    <center><a href="#">Transfer Bank</a></center>
+                                    {{-- <center><a href="#">Transfer Bank</a></center> --}}
+                                    <center><h5>Transfer Bank</h5></center>
                                   </ul>
                                 </div>
+                                <center><input type="radio" name="pembayaran" value="Transfer Bank" id="transferbank"></center>
                               </label>
                             </div>
                           </div>
-                          <input type="radio" name="pembayaran" value="Virtual Account" id="virtualaccount">
-                          <input type="radio" name="pembayaran" value="Transfer Bank" id="transferbank">
                         </form>
                       </div>
                     </div>

@@ -44,7 +44,7 @@
                                       10 Oktober 2021
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="produk_jerukjamaika.html" class="primary-btn">Beli Lagi</a>
+                                      <a href="product" class="primary-btn">Beli Lagi</a>
                                   </td>
                                   <td class="shoping__cart__total">
                                       <a href="review" class="primary-btn">Beri Ulasan</a>
@@ -62,10 +62,10 @@
                                       10 November 2021
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="produk_wortelorganik.html" class="primary-btn">Beli Lagi</a>
+                                      <a href="product" class="primary-btn">Beli Lagi</a>
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="produk_wortelorganik.html" class="primary-btn">Beri Ulasan</a>
+                                      <a href="review" class="primary-btn">Beri Ulasan</a>
                                   </td>
                                   
                               </tr>
@@ -79,10 +79,10 @@
                                       17 Desember 2021
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="produk_jerukbali.html" class="primary-btn">Beli Lagi</a>
+                                      <a href="product" class="primary-btn">Beli Lagi</a>
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="produk_jerukbali.html" class="primary-btn">Beri Ulasan</a>
+                                      <a href="review" class="primary-btn">Beri Ulasan</a>
                                   </td>
                                   
                               </tr>

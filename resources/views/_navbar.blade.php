@@ -12,7 +12,7 @@
         <div class="col-lg-6">
           <nav class="header__menu">
             <ul>
-              <li class="{{ ($title === 'home') ? 'active' : '' }}"><a href="/home">Home</a></li>
+              <li class="{{ ($title === 'home') ? 'active' : '' }}"><a href="home">Home</a></li>
               <li class="{{ ($title === 'about') ? 'active' : '' }}"><a href="/about">Tentang</a></li>
               <li class="{{ ($title === 'faq') ? 'active' : '' }}"><a href="/faq">FAQ</a></li>
             </ul>

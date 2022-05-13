@@ -1,6 +1,6 @@
 <x-layout :title="$title">
 <!-- Breadcrumb Section Begin -->
-  <section class="breadcrumb-section set-bg" data-setbg="img/Background.png">
+  <section class="breadcrumb-section set-bg" data-setbg="/img/Background.png">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -61,7 +61,7 @@
     <div class="row">
       <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
         <div class="featured__item">
-          <div class="featured__item__pic set-bg" data-setbg="img/featured/Orange.jpg"></div>
+          <div class="featured__item__pic set-bg" data-setbg="/img/featured/Orange.jpg"></div>
           <div class="featured__item__text">
             <h6><a href="#">Jeruk Bali</a></h6>
             <h5>Rp 15.000/Kg</h5>
@@ -70,7 +70,7 @@
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
         <div class="featured__item">
-          <div class="featured__item__pic set-bg" data-setbg="img/featured/Orange-2.jpg">
+          <div class="featured__item__pic set-bg" data-setbg="/img/featured/Orange-2.jpg">
           </div>
           <div class="featured__item__text">
             <h6><a href="#">Jeruk Jamaika</a></h6>
@@ -80,7 +80,7 @@
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
         <div class="featured__item">
-          <div class="featured__item__pic set-bg" data-setbg="img/featured/Apple.jpg">
+          <div class="featured__item__pic set-bg" data-setbg="/img/featured/Apple.jpg">
           </div>
           <div class="featured__item__text">
             <h6><a href="#">Apel Malang</a></h6>
@@ -90,7 +90,7 @@
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
         <div class="featured__item">
-          <div class="featured__item__pic set-bg" data-setbg="img/featured/Strawberry.jpg">
+          <div class="featured__item__pic set-bg" data-setbg="/img/featured/Strawberry.jpg">
           </div>
           <div class="featured__item__text">
             <h6><a href="#">Stroberi Organik</a></h6>
@@ -100,7 +100,7 @@
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
         <div class="featured__item">
-          <div class="featured__item__pic set-bg" data-setbg="img/featured/Tomat.jpg">
+          <div class="featured__item__pic set-bg" data-setbg="/img/featured/Tomat.jpg">
           </div>
           <div class="featured__item__text">
             <h6><a href="#">Tomat Merah Organik</a></h6>
