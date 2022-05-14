@@ -27,7 +27,7 @@
           </div>
       </div>
       <div class="col-lg-12 text-center">
-          <a href="pesanan.html"><button type="submit" class="site-btn">Buka Menu Pesanan Saya</button></a>
+          <a href="/imperfect/order"><button type="submit" class="site-btn">Buka Menu Pesanan Saya</button></a>
       </div>
   </div>
 </div>

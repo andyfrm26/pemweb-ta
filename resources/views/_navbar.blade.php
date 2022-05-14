@@ -12,7 +12,7 @@
         <div class="col-lg-6">
           <nav class="header__menu">
             <ul>
-              <li class="{{ ($title === 'home') ? 'active' : '' }}"><a href="home">Home</a></li>
+              <li class="{{ ($title === 'home') ? 'active' : '' }}"><a href="/imperfect/home">Home</a></li>
               <li class="{{ ($title === 'about') ? 'active' : '' }}"><a href="/about">Tentang</a></li>
               <li class="{{ ($title === 'faq') ? 'active' : '' }}"><a href="/faq">FAQ</a></li>
             </ul>
@@ -33,7 +33,7 @@
                   </ul>
                 </div>
               </li>
-              <li><a href="cart"><i class="fa fa-shopping-cart"></i><span>{{ \App\Models\Cart::where('user_id', Auth::user()->id)->count() }}</span></a></li>
+              <li><a href="cart"><i class="fa fa-shopping-cart"></i><span>{{ \App\Models\Cart::where('user_id', Auth::user()->id)->where('status', false)->count() }}</span></a></li>
               <li class="menuprofil"><a href="#"><i class="fa icon_profile"></i></a>
                 <div class="submenuprofil">
                   <ul>

@@ -39,4 +39,22 @@ class AuthController extends Controller
 
         return redirect('/');
     }
+
+    public function editProfile(Request $req)
+    {
+        $user = User::find(Auth::user()->id);
+        $user->name = $req->nama;
+        $user->alamat = $req->alamat;
+        $user->email = $req->email;
+        $user->kode_pos = $req->pos;
+
+        $image = $req->file('profile');
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path('img/photo_profile/'), $fileName);
+        $user->foto = $fileName;
+        
+        $user->save();
+
+        return redirect('/imperfect/profile');
+    }
 }

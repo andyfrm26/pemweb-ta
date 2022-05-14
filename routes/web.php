@@ -52,13 +52,16 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
     Route::get('/wishlist', [ProdukController::class, 'indexWishlist']);
     Route::get('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
     Route::get('/add-cart/{id}', [ProdukController::class, 'addCart']);
+    Route::get('/add-cart-wish/{idWish}/{idProduk}', [ProdukController::class, 'addCartWish']);
     Route::post('/add-voucher/{id}', [ProdukController::class, 'addVoucher']);
     Route::post('/add-payment/{id}', [ProdukController::class, 'addPayment']);
     Route::get('/qty-min/{id}', [ProdukController::class, 'decreaseQuantity']);
     Route::get('/qty-plus/{id}', [ProdukController::class, 'increaseQuantity']);
     Route::get('/remove-cart/{id}', [ProdukController::class, 'removeCart']);
     Route::get('/review', [ProdukController::class, 'review']);
-
+    Route::get('/order', [ProdukController::class, 'indexOrder']);
+    Route::get('/history', [ProdukController::class, 'indexHistory']);
+    Route::post('/change-profile', [AuthController::class, 'editProfile']);
     Route::get('/my-store', function () {
         return view('my-store', [
             'title' => 'my-store'
@@ -83,17 +86,6 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
         ]);
     });
     
-    Route::get('/order', function () {
-        return view('order', [
-            'title' => 'order'
-        ]);
-    });
-    
-    Route::get('/history', function () {
-        return view('history', [
-            'title' => 'history'
-        ]);
-    });
     
     
     Route::get('/product', function () {

@@ -21,13 +21,13 @@ class ProdukController extends Controller
 
     public function indexCart()
     {
-        $allCart = Cart::where('user_id', Auth::user()->id)->get();
-        $checkCart = Cart::where('user_id', Auth::user()->id)->first();
-        $paymentCheck = Payment::where('user_id', Auth::user()->id)->where('status', false)->first();
+        $allCart = Cart::where('user_id', Auth::user()->id)->where('status', false)->get();
+        $checkCart = Cart::where('user_id', Auth::user()->id)->where('status', false)->first();
+        $paymentCheck = Payment::where('user_id', Auth::user()->id)->where('status', 'Keranjang')->first();
         $payment = null;
         if(empty($paymentCheck)) {
             $newPayment = new Payment;
-            $newPayment->status = false;
+            $newPayment->status = 'Keranjang';
             $newPayment->total_price = 0;
             $newPayment->user_id = Auth::user()->id;
             $newPayment->save();
@@ -39,9 +39,13 @@ class ProdukController extends Controller
             $payment->total_price = 0;
         } else {
             $payment->total_price = 0;
+            $count = '';
             foreach($allCart as $ac) {
                 $payment->total_price += $ac->produk->harga * $ac->qty;
+                $ac->payment_id = $payment->id;
+                $ac->save();
             }
+            
             $payment->save();
         }
         return view('cart', [
@@ -82,6 +86,7 @@ class ProdukController extends Controller
         if(empty($checkCart)) {
             $checkCart = new Cart();
             $checkCart->produks_id    = $id;
+            $checkCart->status        = false;
             $checkCart->user_id       = Auth::user()->id;
             $checkCart->save();
         } else {
@@ -89,6 +94,20 @@ class ProdukController extends Controller
         }
         
         return redirect('/imperfect/home');
+    }
+
+    public function addCartWish($idWish, $idProduk)
+    {
+        $checkCart = Cart::where('produks_id', $idProduk)->where('status', false)->first();
+        if(empty($checkCart)) {
+            $checkCart = new Cart();
+            $checkCart->produks_id    = $idProduk;
+            $checkCart->user_id       = Auth::user()->id;
+            $checkCart->save();
+
+            Wishlist::find($idWish)->delete();
+        } 
+        return redirect('/imperfect/wishlist');
     }
 
     public function removeCart($id)
@@ -140,19 +159,56 @@ class ProdukController extends Controller
     {
         $checkPayment = Payment::find($id);
         $checkPayment->payment_method = $req->method;
-        $checkPayment->status = true;
+        $checkPayment->status = 'Dikemas';
         $checkPayment->save();
         
         $allCart = Cart::where('user_id', Auth::user()->id)->get();
         foreach($allCart as $ac) {
-            $ac->delete();
+            $ac->status = true;
+            $ac->save();
         }
-        return redirect('/imperfect');
+        return redirect('/imperfect/success');
     }
 
     public function review(){
         return view('review', [
             'title' => 'review'
         ]);
+    }
+
+    public function indexOrder()
+    {
+        $allOrder = [];
+        $order = Payment::where('user_id', Auth::user()->id)->whereNot('status', 'Keranjang')->get();
+        foreach($order as $o) {
+            $perOrder = Cart::where('payment_id', $o->id)->get();
+            if(count($perOrder) > 0){
+                foreach($perOrder as $po){
+                    array_push($allOrder, $po);
+                }
+            } else {
+                array_push($allOrder, $perOrder);
+            }
+        }
+        array_shift($allOrder);
+        return view('order', ['title' => 'order', 'allOrder' => $allOrder]);
+    }
+
+    public function indexHistory()
+    {
+        $allOrder = [];
+        $order = Payment::where('user_id', Auth::user()->id)->where('status', 'Selesai')->get();
+        foreach($order as $o) {
+            $perOrder = Cart::where('payment_id', $o->id)->get();
+            if(count($perOrder) > 0){
+                foreach($perOrder as $po){
+                    array_push($allOrder, $po);
+                }
+            } else {
+                array_push($allOrder, $perOrder);
+            }
+        }
+        array_shift($allOrder);
+        return view('history', ['title' => 'history', 'allOrder' => $allOrder]);
     }
 }

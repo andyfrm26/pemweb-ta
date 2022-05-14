@@ -2,55 +2,32 @@
   <br>
   <!-- Contact Form Begin -->
   <div class="contact-form spad">
-      <div class="profile-pic-div">
-          <img src="/img/profilku.png" id="photo">
-          <input type="file" id="file">
-          <label for="file" id="uploadBtn">Ganti foto profil</label>
-      </div>
 
       <div class="container">
-          <form action="#">
+          <form action="change-profile" method="post" enctype="multipart/form-data">
+            <div class="profile-pic-div">
+                <img src="/img/photo_profile/{{ Auth::user()->foto}}" id="photo">
+                <input type="file" id="file" name="profile">
+                <label for="file" id="uploadBtn">Ganti foto profil</label>
+            </div>
+              @csrf
               <div class="row">
                   <div class="col-lg-6 col-md-6">
-                      <input type="text" placeholder="Nama Depan">
+                      <input type="text" name="nama" placeholder="Nama Lengkap" value="{{ Auth::user()->name }}">
                   </div>
                   <div class="col-lg-6 col-md-6">
-                      <input type="text" placeholder="Nama Belakang">
+                      <input type="text" name="alamat" placeholder="Alamat" value="{{ Auth::user()->alamat}}">
                   </div>
                   <div class="col-lg-6 col-md-6">
-                      <input type="text" placeholder="Alamat Email">
+                      <input type="text" name="email" placeholder="Alamat Email" value="{{ Auth::user()->email}}">
                   </div>
                   <div class="col-lg-6 col-md-6">
-                      <input type="text" placeholder="No. Hp">
+                      <input type="text" name="pos" placeholder="Kode Pos" value="{{ Auth::user()->kode_pos}}">
                   </div>
+                  <div class="col-lg-12 text-center">
+                    <button type="submit" class="site-btn" style="border-radius:15px" ;>Simpan Profil</button>
+                    </div>
           </form>
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <div class="contact__form__title">
-                          <h2>Informasi General</h2>
-                      </div>
-                  </div>
-              </div>
-              <form action="#">
-                  <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                          <input type="date" placeholder="Tanggal Lahir">
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                          <input type="text" placeholder="Alamat">
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                          <input type="text" placeholder="Kota">
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                          <input type="text" placeholder="Kode Pos">
-                      </div>
-                      <div class="col-lg-12 text-center">
-                          <button type="submit" class="site-btn" style="border-radius:15px" ;>Simpan Profil</button>
-                      </div>
-                  </div>
-          </div>
       </div>
   </div>
   <!-- Contact Form End -->

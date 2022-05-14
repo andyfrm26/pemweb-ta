@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->boolean('status');
+            $table->enum('status', ['Keranjang', 'Dikemas', 'Dikirim', 'Selesai']);
             $table->integer('total_price');
             $table->integer('total_discount')->nullable();
             $table->string('payment_method')->nullable();

@@ -13,4 +13,9 @@ class Cart extends Model
     {
         return $this->belongsTo('App\Models\Produk', 'produks_id', 'id');
     }
+
+    public function payment()
+    {
+        return $this->belongsTo('App\Models\Payment', 'payment_id', 'id');
+    }
 }

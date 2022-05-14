@@ -20,7 +20,7 @@
                   @foreach($allCart as $cart)
                   <div class="featured__item">
                     <div class="featured__item__pics">
-                      <img class="gambarjerukbali" src="/img/featured/{{$cart->produk->foto}}" style="width:150px;height:148px;" align="left" bgcolor="white">
+                      <img class="gambarjerukbali" src="/img/Jeruk_bali.png" style="width:150px;height:148px;" align="left" bgcolor="white">
                       <br>
                       <p8><class="text heading">&nbsp&nbsp&nbsp {{$cart->produk->nama}}<p8>
                       <br/>

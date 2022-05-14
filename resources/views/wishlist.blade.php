@@ -34,14 +34,14 @@
                               @foreach($allWish as $wish)
                               <tr>
                                   <td class="shoping__cart__item">
-                                      <img src="/img/{{ $wish->produk->foto}}" alt="">
+                                      <img src="/img/Jeruk.png" alt="">
                                       <h5>{{ $wish->produk->nama }}</h5>
                                   </td>
                                   <td class="shoping__cart__price">
                                       Rp {{ number_format($wish->produk->harga, 0, '','.') }}
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="#" class="primary-btn">Add to Cart</a>
+                                      <a href="/imperfect/add-cart-wish/{{ $wish->id }}/{{$wish->produk->id}}" class="primary-btn">Add to Cart</a>
                                   </td>
                               </tr>
                               @endforeach

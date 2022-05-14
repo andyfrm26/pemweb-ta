@@ -32,33 +32,17 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach($allOrder as $o)
                   <tr>
                     <td class="shoping__cart__item">
                       <img src="/img/Carrot.png" alt="">
-                      <h5>Wortel</h5>
+                      <h5>{{ $o->produk->nama}}</h5>
                     </td>
-                    <td class="shoping__cart__price">Rp30.000</td>
-                    <td class="shoping__cart__total">Dijalan</td>
+                    <td class="shoping__cart__price">Rp {{ number_format($o->produk->harga, 0, '','.') }}</td>
+                    <td class="shoping__cart__total">{{ $o->payment->status }}</td>
                     <td class="shoping__cart__total"><a href="#" class="primary-btn">Lacak</a></td>
                   </tr>
-                  <tr>
-                    <td class="shoping__cart__item">
-                      <img src="/img/Jeruk.png" alt="">
-                      <h5>Jeruk</h5>
-                    </td>
-                    <td class="shoping__cart__price">Rp20.000</td>
-                    <td class="shoping__cart__total">Dijalan</td>
-                    <td class="shoping__cart__total"><a href="#" class="primary-btn">Lacak</a></td>
-                  </tr>
-                  <tr>
-                    <td class="shoping__cart__item">
-                      <img src="/img/Jeruk_bali.png" alt="">
-                      <h5>Jeruk bali</h5>
-                    </td>
-                    <td class="shoping__cart__price">Rp10.000</td>
-                    <td class="shoping__cart__total">Diproses</td>
-                    <td class="shoping__cart__total"><a href="#" class="primary-btn">Lacak</a></td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

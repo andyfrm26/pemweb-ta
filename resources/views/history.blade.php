@@ -34,58 +34,22 @@
                               </tr>
                           </thead>
                           <tbody>
+                              @foreach($allOrder as $o)
                               <tr>
                                   <td class="shoping__cart__item">
                                       <img src="/img/Jeruk.png" alt="">
-                                      <h5>Jeruk</h5>
+                                      <h5>{{ $o->produk->nama }}</h5>
                                   </td>
                                  
                                   <td class="shoping__cart__quantity">
-                                      10 Oktober 2021
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="product" class="primary-btn">Beli Lagi</a>
+                                      {{ \Carbon\Carbon::parse($o->payment->updated_at)->format('d F Y') }}
                                   </td>
                                   <td class="shoping__cart__total">
                                       <a href="review" class="primary-btn">Beri Ulasan</a>
                                   </td>
                                   
                               </tr>
-                             
-                              <tr>
-                                  <td class="shoping__cart__item">
-                                      <img src="/img/Carrot.png" alt="">
-                                      <h5>Wortel</h5>
-                                  </td>
-                                  
-                                  <td class="shoping__cart__quantity">
-                                      10 November 2021
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="product" class="primary-btn">Beli Lagi</a>
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="review" class="primary-btn">Beri Ulasan</a>
-                                  </td>
-                                  
-                              </tr>
-                              <tr>
-                                  <td class="shoping__cart__item">
-                                      <img src="/img/Jeruk_bali.png" alt="">
-                                      <h5>Jeruk Bali</h5>
-                                  </td>
-                                 
-                                  <td class="shoping__cart__quantity">
-                                      17 Desember 2021
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="product" class="primary-btn">Beli Lagi</a>
-                                  </td>
-                                  <td class="shoping__cart__total">
-                                      <a href="review" class="primary-btn">Beri Ulasan</a>
-                                  </td>
-                                  
-                              </tr>
+                             @endforeach
                           </tbody>
                       </table>
                   </div>
