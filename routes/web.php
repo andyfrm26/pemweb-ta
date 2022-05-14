@@ -65,6 +65,12 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
         ]);
     });
 
+    Route::get('/success', function () {
+        return view('transaction-success', [
+            'title' => 'success'
+        ]);
+    });
+
     Route::get('/help', function () {
         return view('help', [
             'title' => 'help'
