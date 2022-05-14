@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('product_list');
+            $table->boolean('status');
             $table->integer('total_price');
+            $table->integer('total_discount')->nullable();
+            $table->string('payment_method')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('voucher_id')->nullable();
             $table->timestamps();

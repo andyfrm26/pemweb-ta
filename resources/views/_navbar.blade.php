@@ -18,7 +18,7 @@
             </ul>
           </nav>
         </div>
-        @if ($title != 'login')
+        @if ($title != 'login' && $title != 'sign-up')
           
         <div class="col-lg-3">
           <div class="header__cart">
@@ -33,7 +33,7 @@
                   </ul>
                 </div>
               </li>
-              <li><a href="cart"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+              <li><a href="cart"><i class="fa fa-shopping-cart"></i><span>{{ \App\Models\Cart::where('user_id', Auth::user()->id)->count() }}</span></a></li>
               <li class="menuprofil"><a href="#"><i class="fa icon_profile"></i></a>
                 <div class="submenuprofil">
                   <ul>
@@ -41,7 +41,7 @@
                     <li><a href="order"><i class="fa icon_box-checked"></i> Pesanan Saya</a></li>
                     <li><a href="history"><i class="fa fa-history"></i> History Belanja</a></li>
                     <li><a href="wishlist"><i class="fa fa-heart"></i> Wishlist </a></li>
-                    <li><a href=""><i class="fa fa-sign-out"></i> Sign Out </a></li>
+                    <li><a href="/logout"><i class="fa fa-sign-out"></i> Sign Out </a></li>
                   </ul>
                 </div>
               </li>

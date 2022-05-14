@@ -21,16 +21,17 @@
                   <div class="featured__item">
                     <div class="featured__item__pics">
                       <img class="gambarjerukbali" src="/img/featured/{{$cart->produk->foto}}" style="width:150px;height:148px;" align="left" bgcolor="white">
+                      <br>
                       <p8><class="text heading">&nbsp&nbsp&nbsp {{$cart->produk->nama}}<p8>
                       <br/>
-                      <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp 45.000 sesuai beratnya<p4>
+                      <p4><class="text heading">&nbsp&nbsp&nbsp&nbsp&nbsp Totalnya adalah Rp {{ number_format($cart->produk->harga * $cart->qty, 0, '','.') }} sesuai beratnya<p4>
                       <br/>
                       <p7>&nbsp&nbsp&nbsp&nbsp Rp {{ number_format($cart->produk->harga, 0, '','.') }}/Kg</p7>
-                      <button type="submit" class="ite-btn-hapus">HAPUS</button>
+                      <a href="remove-cart/{{ $cart->id }}" class="ite-btn-hapus">HAPUS</a>
                       <div class="qty-container">
-                        <span class="minus"><span></span></span>
-                        <span class="num">1</span>
-                        <span class="plus"><span></span><span></span></span>
+                        <a href="qty-min/{{ $cart->id }}"><span class="minus"><span></span></span></a>
+                        <span class="num">{{ $cart->qty }}</span>
+                        <a href="qty-plus/{{ $cart->id }}"><span class="plus"><span></span><span></span></span></a>
                       </div>
                     </div>
                   </div>
@@ -39,28 +40,33 @@
                 <div class="col-lg-12">
                   <div class="hero__search">
                     <div class="hero__search__formm">
-                      <form action="#">
                         <p6><class="text heading">Kode Voucher</p6>
                         <br/>
                         <div class="hero__search">
+                          <form action="add-voucher/{{$payment->id}}" method="post">
+                            @csrf
+                            <div class="form-group form-primary"> 
+                              <input type="text" class="form-control" name="kode" value="{{ ($payment->voucher_id) ? $payment->voucher->code_voucher : ''}}" placeholder="Masukan kode disini" id="Kode">
+                              <button type="submit" class="btn btn-primary">Add Voucher</button>
+                            </div> 
+                          </form>
                           <form action="#">
-                            <div class="form-group form-primary"> <input type="text" class="form-control" name="Kode" value="" placeholder="Masukan kode disini" id="Kode"></div>
                             <h6 class="alignleft">Subtotal</h6>
-                            <h6 class="alignright">Rp135.000</h6><br />
+                            <h6 class="alignright">Rp {{ number_format($payment->total_price, 0, '','.') }}</h6><br />
                             <h6 class="alignleft">Kupon</h6>
-                            <h6 class="alignright">Rp0</h6><br />
+                            <h6 class="alignright">Rp {{ number_format($payment->total_discount, 0, '','.') }}</h6><br />
                             <hr />
                             <h6 class="alignleft">Total</h6>
-                            <h6 class="alignright">Rp135.000</h6>
+                            <h6 class="alignright">Rp {{ number_format($payment->total_price - $payment->total_discount, 0, '','.') }}</h6>
                           </form>
                         </div>
-                      </form>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="hero__search">
                       <div class="hero__search__furmm">
-                        <form action="#">
+                        <form action="add-payment/{{ $payment->id }}" method="post">
+                          @csrf
                           <div class="col-md-12">
                             <p6><class="text heading">Pilih Metode Pembayaran</p6>
                             <br/>
@@ -75,7 +81,7 @@
                                   </ul>
                                 </div>
                                 <center>
-                                  <input type="radio" name="pembayaran" value="Virtual Account" id="virtualaccount">
+                                  <input type="radio" name="method" value="Virtual Account" id="virtualaccount">
                                 </center>
                               </label>
                               <label for="transferbank">
@@ -86,17 +92,17 @@
                                     <center><h5>Transfer Bank</h5></center>
                                   </ul>
                                 </div>
-                                <center><input type="radio" name="pembayaran" value="Transfer Bank" id="transferbank"></center>
+                                <center><input type="radio" name="method" value="Transfer Bank" id="transferbank"></center>
                               </label>
                             </div>
                           </div>
-                        </form>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-12 text-center">
-                    <a href="transaksi_berhasil.html"><button type="submit" class="sites-btn">Checkout</button></a>
+                    <button type="submit" class="sites-btn">Checkout</button>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>

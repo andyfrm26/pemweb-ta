@@ -37,6 +37,7 @@ Route::get('/login', function () {
 })->name('login');;
 
 Route::post('/login', [AuthController::class, 'login'])->name('loginCheck');
+Route::get('/logout', [AuthController::class, 'logout'])->name('loginCheck');
 Route::post('/sign-up', [AuthController::class, 'register'])->name('register');
 
 Route::get('/sign-up', function () {
@@ -51,6 +52,11 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
     Route::get('/wishlist', [ProdukController::class, 'indexWishlist']);
     Route::get('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
     Route::get('/add-cart/{id}', [ProdukController::class, 'addCart']);
+    Route::post('/add-voucher/{id}', [ProdukController::class, 'addVoucher']);
+    Route::post('/add-payment/{id}', [ProdukController::class, 'addPayment']);
+    Route::get('/qty-min/{id}', [ProdukController::class, 'decreaseQuantity']);
+    Route::get('/qty-plus/{id}', [ProdukController::class, 'increaseQuantity']);
+    Route::get('/remove-cart/{id}', [ProdukController::class, 'removeCart']);
     Route::get('/review', [ProdukController::class, 'review']);
 
     Route::get('/my-store', function () {
@@ -82,14 +88,7 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
             'title' => 'history'
         ]);
     });
-
-    Route::get('/review', function () {
-        return view('review', [
-            'title' => 'review'
-        ]);
-    });
     
-
     
     Route::get('/product', function () {
         return view('product', [
