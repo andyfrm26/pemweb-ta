@@ -1,7 +1,7 @@
 <x-layout :title="$title">
 
 <!-- Breadcrumb Section Begin -->
-  <section class="breadcrumb-section set-bg" data-setbg="img/Background.png">
+  <section class="breadcrumb-section set-bg"  data-setbg="/img/Background.png"  style="background-image: url('/img/Background.png');">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="contact__form__title">
-            <img class="gambarhubungikami" src="img/hubungikami.svg" alt="">
+            <img class="gambarhubungikami" src="/img/hubungikami.svg" alt="">
             <h2 class="bantuanh2-chatdenganadmin">Anda Butuh Bantuan Kami?</h2>
             <h6 class="bantuanh6-chatdenganadmin">Silahkan isi form dibawah ini untuk memulai fitur chat dengan admin!</h6>
           </div>

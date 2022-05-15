@@ -177,7 +177,7 @@
           </div>
         </div>
         <div class="btn-box">
-          <a href="homepage.html">View All</a>
+          <a href="/imperfect/home">View All</a>
         </div>
       </div>
     </section>
@@ -267,9 +267,9 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="footer__about">
               <div class="footer__about__logo">
-                <a href="./index.html"><img src="img/LP/logo.svg" alt=""></a>
+                <a href=""><img src="img/LP/logo.svg" alt=""></a>
                 <a>Hargai hasil panenmu dan mulailah berlangganan bersama kami sekarang!</a>
-                <a href="./index.html"><img src="img/LP/sosmed.png" alt=""></a>
+                <a href=""><img src="img/LP/sosmed.png" alt=""></a>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@
             <div class="footer__widget">
               <h6>Partner Pembayaran</h6>
 
-              <a href="./index.html"><img src="img/LP/metodepembayaran.png" alt=""></a>
+              <a href=""><img src="img/LP/metodepembayaran.png" alt=""></a>
             </div>
           </div>
         </div>

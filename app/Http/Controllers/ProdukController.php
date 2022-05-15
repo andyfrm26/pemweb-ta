@@ -8,15 +8,30 @@ use App\Models\Wishlist;
 use App\Models\Payment;
 use App\Models\Voucher;
 use App\Models\Cart;
+use App\Models\Rating;
 use Illuminate\Support\Facades\Auth;
 
 class ProdukController extends Controller
 {
     public function indexHomepage()
     {
-        $produk = Produk::paginate(8);
+        $produk = Produk::paginate(12);
         $title  = 'homepage';
         return view('home')->with(compact('produk', 'title'));
+    }
+
+    public function indexHomepageByName(Request $req)
+    {
+        $produk = Produk::where('nama', 'LIKE', "%$req->nama%")->get();
+        $title  = 'homepage';
+        return view('home')->with(compact('produk', 'title'));
+    }
+
+    public function indexProduct($id)
+    {
+        $produk = Produk::find($id);
+        $recom = Produk::whereNot('id', $id)->paginate(3);
+        return view('product', ['title' => 'produk', 'produk' => $produk, 'recom' => $recom]);
     }
 
     public function indexCart()
@@ -82,11 +97,28 @@ class ProdukController extends Controller
 
     public function addCart($id)
     {
-        $checkCart = Cart::where('produks_id', $id)->first();
+        $checkCart = Cart::where('produks_id', $id)->where('status', false)->first();
         if(empty($checkCart)) {
             $checkCart = new Cart();
             $checkCart->produks_id    = $id;
             $checkCart->status        = false;
+            $checkCart->user_id       = Auth::user()->id;
+            $checkCart->save();
+        } else {
+            $checkCart->delete();
+        }
+        
+        return redirect('/imperfect/home');
+    }
+
+    public function addCartValue(Request $req, $id)
+    {
+        $checkCart = Cart::where('produks_id', $id)->where('status', false)->first();
+        if(empty($checkCart)) {
+            $checkCart = new Cart();
+            $checkCart->produks_id    = $id;
+            $checkCart->status        = false;
+            $checkCart->qty           = $req->qty;
             $checkCart->user_id       = Auth::user()->id;
             $checkCart->save();
         } else {
@@ -102,6 +134,7 @@ class ProdukController extends Controller
         if(empty($checkCart)) {
             $checkCart = new Cart();
             $checkCart->produks_id    = $idProduk;
+            $checkCart->status        = false;
             $checkCart->user_id       = Auth::user()->id;
             $checkCart->save();
 
@@ -170,16 +203,35 @@ class ProdukController extends Controller
         return redirect('/imperfect/success');
     }
 
-    public function review(){
-        return view('review', [
-            'title' => 'review'
-        ]);
+    public function indexReview($id){
+        $produk = Produk::find($id);
+        return view('review', ['title' => 'review', 'produk' => $produk]);
+    }
+
+    public function storeReview(Request $req, $id){
+        $produk = Produk::find($id);
+        $newReview = new Rating;
+        $newReview->produks_id = $id;
+        $newReview->user_id = Auth::user()->id;
+        $newReview->nilai = $req->rate;
+        $newReview->ulasan = $req->deskripsi;
+        if($req->file('ulasan_foto') != null) {
+            $image = $req->file('ulasan_foto');
+            $fileName = $image->getClientOriginalName();
+            $image->move(public_path('img/ulasan/'), $fileName);
+            $newReview->foto = $fileName;
+        } else {
+            $newReview->foto = '';
+        }
+        $newReview->save();
+        
+        return redirect('/imperfect/product/'.$id);
     }
 
     public function indexOrder()
     {
         $allOrder = [];
-        $order = Payment::where('user_id', Auth::user()->id)->whereNot('status', 'Keranjang')->get();
+        $order = Payment::where('user_id', Auth::user()->id)->whereNot('status', 'Keranjang')->whereNot('status', 'Selesai')->get();
         foreach($order as $o) {
             $perOrder = Cart::where('payment_id', $o->id)->get();
             if(count($perOrder) > 0){
@@ -190,7 +242,7 @@ class ProdukController extends Controller
                 array_push($allOrder, $perOrder);
             }
         }
-        array_shift($allOrder);
+
         return view('order', ['title' => 'order', 'allOrder' => $allOrder]);
     }
 

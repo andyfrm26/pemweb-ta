@@ -4,9 +4,15 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="header__logo">
+            @if(Auth::user() != null)
+            <a href="/imperfect/home">
+              <img src="/img/logo.svg" alt="">
+            </a>
+            @else
             <a href="/">
               <img src="/img/logo.svg" alt="">
             </a>
+            @endif
           </div>
         </div>
         <div class="col-lg-6">
@@ -18,7 +24,7 @@
             </ul>
           </nav>
         </div>
-        @if ($title != 'login' && $title != 'sign-up')
+        @if ($title != 'login' && $title != 'sign-up' && $title != 'about' && $title != 'faq')
           
         <div class="col-lg-3">
           <div class="header__cart">

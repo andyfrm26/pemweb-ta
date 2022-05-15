@@ -45,7 +45,7 @@
                                       {{ \Carbon\Carbon::parse($o->payment->updated_at)->format('d F Y') }}
                                   </td>
                                   <td class="shoping__cart__total">
-                                      <a href="review" class="primary-btn">Beri Ulasan</a>
+                                      <a href="/imperfect/review/{{ $o->produk->id }}" class="primary-btn">Beri Ulasan</a>
                                   </td>
                                   
                               </tr>

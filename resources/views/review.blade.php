@@ -5,7 +5,7 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3 class="text-center heading">Ulasan produk</h3><br/>
+                            <h3 class="text-center heading">Ulasan {{$produk->nama}}</h3><br/>
                         </div>
                     </div>
                     <div class="small-container single-product-review">
@@ -21,6 +21,8 @@
                             </div>
                         </div>
                         <br>
+                        <form action="/imperfect/review/{{$produk->id}}" method="post">
+                            @csrf
                         <p>Silahkan beri nilai untuk ulasan anda</p>
                         <div class="rating-review">
                             <input type="radio" id="star5" name="rate" value="5" />
@@ -37,20 +39,17 @@
                         <br>
                         <div class="product-form pad-form-20">
                             <p>Tambahkan gambar terhadap ulasan anda untuk membantu pembeli lain dalam berbelanja produk ini</p>
-                            <form action="#">
-                                <input class="UploadGambarUlasan" type="file" id="GambarUlasan" name="filename">
-                            </form>
+                            <input class="UploadGambarUlasan" type="file" id="GambarUlasan" name="ulasan_foto">
                         </div>
                         <br>
-                        <div class="product-form pad-form-20">
-                            <form action="#">
-                                <textarea class="inputteksulasan" placeholder="Tulis ulasan anda tentang produk ini di sini..."></textarea>
-                            </form>
+                        <div class="form-group">
+                            <textarea class="form-control" name="deskripsi" placeholder="Tulis ulasan anda tentang produk ini di sini..."></textarea>
                         </div>
                         <br>
                         <div class="col-md-12">
                             <button type="submit" class="site-btn">Kirim Ulasan</button>
                         </div>
+                        </form>
                         <div class="margin-sendreview"></div>
                     </div>
                 </div>

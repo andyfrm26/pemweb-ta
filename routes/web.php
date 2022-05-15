@@ -3,16 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('index');
@@ -48,20 +38,24 @@ Route::get('/sign-up', function () {
 
 Route::prefix('imperfect')->middleware('auth')->group(function () { 
     Route::get('/home', [ProdukController::class, 'indexHomepage']);
+    Route::get('/home/search', [ProdukController::class, 'indexHomepageByName']);
     Route::get('/cart', [ProdukController::class, 'indexCart']);
     Route::get('/wishlist', [ProdukController::class, 'indexWishlist']);
     Route::get('/add-wishlist/{id}', [ProdukController::class, 'addWishlist']);
     Route::get('/add-cart/{id}', [ProdukController::class, 'addCart']);
+    Route::post('/add-cart-with-value/{id}', [ProdukController::class, 'addCartValue']);
     Route::get('/add-cart-wish/{idWish}/{idProduk}', [ProdukController::class, 'addCartWish']);
     Route::post('/add-voucher/{id}', [ProdukController::class, 'addVoucher']);
     Route::post('/add-payment/{id}', [ProdukController::class, 'addPayment']);
     Route::get('/qty-min/{id}', [ProdukController::class, 'decreaseQuantity']);
     Route::get('/qty-plus/{id}', [ProdukController::class, 'increaseQuantity']);
     Route::get('/remove-cart/{id}', [ProdukController::class, 'removeCart']);
-    Route::get('/review', [ProdukController::class, 'review']);
+    Route::get('/review/{id}', [ProdukController::class, 'indexReview']);
+    Route::post('/review/{id}', [ProdukController::class, 'storeReview']);
     Route::get('/order', [ProdukController::class, 'indexOrder']);
     Route::get('/history', [ProdukController::class, 'indexHistory']);
     Route::post('/change-profile', [AuthController::class, 'editProfile']);
+    Route::get('/product/{id}', [ProdukController::class, 'indexProduct']);
     Route::get('/my-store', function () {
         return view('my-store', [
             'title' => 'my-store'
@@ -86,16 +80,4 @@ Route::prefix('imperfect')->middleware('auth')->group(function () {
         ]);
     });
     
-    
-    
-    Route::get('/product', function () {
-        return view('product', [
-            'title' => 'product',
-            'namaBuah' => 'Alpukat Mentega',
-            'hargaBuah' => 6000,
-            'terjual' => 56,
-            'rating' => 4,
-            'detailBuah' => 'Sayang banget alpukat mentega ini suka dihindari karena kulitnya tidak mulus,berbercak, dan ukurannya yang lebih kecil dibanding yang lainnya. Padahal sama-sama manis dan lezat!'
-        ]);
-    });
 });

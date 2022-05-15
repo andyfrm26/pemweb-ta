@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->integer('nilai');
             $table->string('ulasan');
+            $table->string('foto');
             $table->timestamps();
 
             $table->foreign('produks_id')->references('id')->on('produks');
