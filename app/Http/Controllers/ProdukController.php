@@ -31,7 +31,8 @@ class ProdukController extends Controller
     {
         $produk = Produk::find($id);
         $recom = Produk::whereNot('id', $id)->paginate(3);
-        return view('product', ['title' => 'produk', 'produk' => $produk, 'recom' => $recom]);
+        $review = Rating::where('produks_id', $id)->paginate(3);
+        return view('product', ['title' => 'produk', 'produk' => $produk,'review' => $review, 'recom' => $recom]);
     }
 
     public function indexCart()

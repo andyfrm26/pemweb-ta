@@ -78,33 +78,19 @@
 
             <div class="small-container review-product">
               <div class="reviews-container">
+                @foreach($review as $r)
                 <div class="single-review">
                   <span class="reviewer-name">
-                    <h5>Ilham</h5>
+                    <h5>{{$r->user->name}}</h5>
                   </span>
                   <span class="reviewer-rating">
+                    @for($i = 1; $i <= $r->nilai; $i++)
                     <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
+                    @endfor
                   </span>
-                  <span class="reviewer-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laboriosam, vero voluptatum quaerat tempora incidunt dolorum. Quia similique itaque ad.</span>
+                  <span class="reviewer-review">{{ $r->ulasan }}</span>
                 </div>
-                <div class="single-review">
-                  <span class="reviewer-name">
-                    <h5>Ilham</h5>
-                  </span>
-                  <span class="reviewer-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span class="reviewer-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laboriosam, vero voluptatum quaerat tempora incidunt dolorum. Quia similique itaque ad.</span>
-                </div>
-              </div>
+                @endforeach
             </div>
 
               <!-- title -->
