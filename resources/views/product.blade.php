@@ -69,6 +69,44 @@
               </div>
             </div>
 
+            <div class="small-container review-product">
+              <div class="row row-2">
+                <h2>Ulasan Produk</h2>
+                <a class="selengkapnya" href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="small-container review-product">
+              <div class="reviews-container">
+                <div class="single-review">
+                  <span class="reviewer-name">
+                    <h5>Ilham</h5>
+                  </span>
+                  <span class="reviewer-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="reviewer-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laboriosam, vero voluptatum quaerat tempora incidunt dolorum. Quia similique itaque ad.</span>
+                </div>
+                <div class="single-review">
+                  <span class="reviewer-name">
+                    <h5>Ilham</h5>
+                  </span>
+                  <span class="reviewer-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="reviewer-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laboriosam, vero voluptatum quaerat tempora incidunt dolorum. Quia similique itaque ad.</span>
+                </div>
+              </div>
+            </div>
+
               <!-- title -->
               <div class="small-container">
                 <div class="row row-2">

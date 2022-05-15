@@ -3671,7 +3671,7 @@ min-width: fit-content;
 	transition: background 0.5s;
   }
 
-  .rating .fa {
+	.fa {
 	color: #ff523b;
   }
   
@@ -3713,6 +3713,27 @@ min-width: fit-content;
 	margin-right: 10px;
 	border: 1px solid #27AE60;
   }
+
+	/* Review Product */
+.reviews-container {
+		/* background-color: cyan; */
+	}
+
+.single-review {
+	/* background-color: lime; */
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #ccc;
+	padding: 30px 50px;
+	margin-bottom: 30px;
+}
+
+.single-review .reviewer-name h5 {
+	/* text-transform: uppercase; */
+	font-size: 24px;
+}
+
+	/* end of Review Product */
   
   input:focus {
 	outline: none;
