@@ -3694,6 +3694,10 @@ min-width: fit-content;
 	font-size: 22px;
 	font-weight: bold;
   }
+
+.single-product .product-form, .single-product p {
+		margin: 0 auto;
+	}
   
   .single-product select {
 	display: block;
